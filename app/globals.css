@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Orbitron', monospace;
+  background: #0F1923;
+  color: #ECE8E1;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px #FF4655, 0 0 20px #FF4655, 0 0 30px #FF4655;
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 10px #FF4655, inset 0 0 10px rgba(255, 70, 85, 0.2);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F1923;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF4655;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b7a;
+}
