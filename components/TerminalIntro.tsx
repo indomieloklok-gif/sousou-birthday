@@ -49,6 +49,7 @@ export default function TerminalIntro({ onComplete }: TerminalIntroProps) {
     return () => {
       if (timeout) clearTimeout(timeout)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

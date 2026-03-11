@@ -169,8 +169,9 @@ export default function LizardGame({ onWin }: LizardGameProps) {
     }
 
     window.addEventListener('keydown', handleKeyPress)
-    if (gameAreaRef.current) {
-      gameAreaRef.current.addEventListener('click', handleClick)
+    const gameAreaElement = gameAreaRef.current
+    if (gameAreaElement) {
+      gameAreaElement.addEventListener('click', handleClick)
     }
 
     return () => {
@@ -179,8 +180,8 @@ export default function LizardGame({ onWin }: LizardGameProps) {
         cancelAnimationFrame(gameLoopRef.current)
       }
       window.removeEventListener('keydown', handleKeyPress)
-      if (gameAreaRef.current) {
-        gameAreaRef.current.removeEventListener('click', handleClick)
+      if (gameAreaElement) {
+        gameAreaElement.removeEventListener('click', handleClick)
       }
     }
   }, [gameStarted, gameOver, jump, showWinMessage, targetScore, lizardY])
