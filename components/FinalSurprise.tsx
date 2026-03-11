@@ -108,7 +108,7 @@ export default function FinalSurprise() {
           ref={secondMessageRef}
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-valorant-red text-glow animate-glow"
         >
-          Behave… Mommy's watching
+          Behave… Mommy&apos;s watching
         </p>
         
         <p
