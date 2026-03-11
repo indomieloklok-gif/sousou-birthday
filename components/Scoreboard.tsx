@@ -24,6 +24,7 @@ export default function Scoreboard() {
   useEffect(() => {
     stats.forEach((stat, index) => {
       if (typeof stat.value === 'number' && stat.value !== Infinity) {
+        const numericValue = stat.value as number
         gsap.to(
           {},
           {
@@ -31,7 +32,7 @@ export default function Scoreboard() {
             ease: 'power2.out',
             onUpdate: function () {
               const progress = this.progress()
-              const currentValue = Math.floor(stat.value * progress)
+              const currentValue = Math.floor(numericValue * progress)
               setDisplayStats((prev) => ({
                 ...prev,
                 [stat.label]: currentValue,
